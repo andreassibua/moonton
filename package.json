@@ -2,7 +2,9 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "prod": "npm run production",
+        "hot": "mix wtch --hot"
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
