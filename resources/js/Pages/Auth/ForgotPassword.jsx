@@ -1,8 +1,8 @@
 import React from 'react';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
-import PrimaryButton from '@/Components/PrimaryButton';
-import TextInput from '@/Components/TextInput';
+import Button from '@/Components/Button';
+import Input from '@/Components/Input';
 import { Head, useForm } from '@inertiajs/inertia-react';
 
 export default function ForgotPassword({ status }) {
@@ -32,7 +32,7 @@ export default function ForgotPassword({ status }) {
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
 
             <form onSubmit={submit}>
-                <TextInput
+                <Input
                     type="text"
                     name="email"
                     value={data.email}
@@ -44,9 +44,9 @@ export default function ForgotPassword({ status }) {
                 <InputError message={errors.email} className="mt-2" />
 
                 <div className="flex items-center justify-end mt-4">
-                    <PrimaryButton className="ml-4" processing={processing}>
+                    <Button className="ml-4" processing={processing}>
                         Email Password Reset Link
-                    </PrimaryButton>
+                    </Button>
                 </div>
             </form>
         </GuestLayout>
