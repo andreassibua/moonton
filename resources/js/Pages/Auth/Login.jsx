@@ -3,8 +3,8 @@ import Checkbox from '@/Components/Checkbox';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
-import PrimaryButton from '@/Components/PrimaryButton';
-import TextInput from '@/Components/TextInput';
+import Button from '@/Components/Button';
+import Input from '@/Components/Input';
 import { Head, Link, useForm } from '@inertiajs/inertia-react';
 
 export default function Login({ status, canResetPassword }) {
@@ -40,7 +40,7 @@ export default function Login({ status, canResetPassword }) {
                 <div>
                     <InputLabel forInput="email" value="Email" />
 
-                    <TextInput
+                    <Input
                         type="text"
                         name="email"
                         value={data.email}
@@ -56,7 +56,7 @@ export default function Login({ status, canResetPassword }) {
                 <div className="mt-4">
                     <InputLabel forInput="password" value="Password" />
 
-                    <TextInput
+                    <Input
                         type="password"
                         name="password"
                         value={data.password}
@@ -86,9 +86,9 @@ export default function Login({ status, canResetPassword }) {
                         </Link>
                     )}
 
-                    <PrimaryButton className="ml-4" processing={processing}>
+                    <Button className="ml-4" processing={processing}>
                         Log in
-                    </PrimaryButton>
+                    </Button>
                 </div>
             </form>
         </GuestLayout>

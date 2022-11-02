@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
-import PrimaryButton from '@/Components/PrimaryButton';
-import TextInput from '@/Components/TextInput';
+import Button from '@/Components/Button';
+import Input from '@/Components/Input';
 import { Head, Link, useForm } from '@inertiajs/inertia-react';
 
 export default function Register() {
@@ -38,7 +38,7 @@ export default function Register() {
                 <div>
                     <InputLabel forInput="name" value="Name" />
 
-                    <TextInput
+                    <Input
                         type="text"
                         name="name"
                         value={data.name}
@@ -55,7 +55,7 @@ export default function Register() {
                 <div className="mt-4">
                     <InputLabel forInput="email" value="Email" />
 
-                    <TextInput
+                    <Input
                         type="email"
                         name="email"
                         value={data.email}
@@ -71,7 +71,7 @@ export default function Register() {
                 <div className="mt-4">
                     <InputLabel forInput="password" value="Password" />
 
-                    <TextInput
+                    <Input
                         type="password"
                         name="password"
                         value={data.password}
@@ -87,7 +87,7 @@ export default function Register() {
                 <div className="mt-4">
                     <InputLabel forInput="password_confirmation" value="Confirm Password" />
 
-                    <TextInput
+                    <Input
                         type="password"
                         name="password_confirmation"
                         value={data.password_confirmation}
@@ -104,9 +104,9 @@ export default function Register() {
                         Already registered?
                     </Link>
 
-                    <PrimaryButton className="ml-4" processing={processing}>
+                    <Button className="ml-4" processing={processing}>
                         Register
-                    </PrimaryButton>
+                    </Button>
                 </div>
             </form>
         </GuestLayout>
